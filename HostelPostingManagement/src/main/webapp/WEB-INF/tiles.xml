@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- Define layout templates -->
+	<!-- template user seller -->
+	<definition name="template-main"
+		template="/WEB-INF/views/default-layout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="content" value=""></put-attribute>
+	</definition>
+
+	<definition name="template-login-register"
+		template="/WEB-INF/views/login-register/login-register-layout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="content" value=""></put-attribute>
+	</definition>
+
+	<!-- login-register page -->
+	<!--Login page -->
+	<definition name="login" extends="template-login-register">
+		<put-attribute name="title" value="LOGIN"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/login-register/login.jsp"></put-attribute>
+	</definition>
+	
+	<!--Login page -->
+	<definition name="reset-password" extends="template-login-register">
+		<put-attribute name="title" value="Reset Password"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/login-register/forget-password.jsp"></put-attribute>
+	</definition>
+
+	<!--Logout -->
+	<definition name="logout" extends="template-login-register">
+		<put-attribute name="title" value="Dăng nhập"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/login-register/login.jsp"></put-attribute>
+	</definition>
+
+	<!--Register page -->
+	<definition name="register"
+		extends="template-login-register">
+		<put-attribute name="title" value="Đăng ký"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/login-register/register.jsp"></put-attribute>
+	</definition>
+
+	<!--Profile page -->
+	<definition name="edit-profile" extends="template-main">
+		<put-attribute name="title"
+			value="Chỉnh sửa thông tin"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/edit-profile.jsp"></put-attribute>
+	</definition>
+	
+	<!--reset pasword page -->
+	<definition name="resetPasword" extends="template-main">
+		<put-attribute name="title"
+			value="Chỉnh sửa thông tin"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/reset-password.jsp"></put-attribute>
+	</definition>
+
+<!-- common -->
+	<!-- List post, home page -->
+	<definition name="view-posts" extends="template-main">
+		<put-attribute name="title" value="Danh Sách Bài Đăng"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/view-posts.jsp"></put-attribute>
+	</definition>
+
+	<!-- user seller pages -->
+	<!-- view all post of user page -->
+	<definition name="view-user-post" extends="template-main">
+		<put-attribute name="title" value="Danh Sách Bài Đăng"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/user-seller/view-all-post.jsp"></put-attribute>
+	</definition>
+
+	<!-- view all hidden post of user page -->
+	<definition name="view-user-hidden-post"
+		extends="template-main">
+		<put-attribute name="title"
+			value="Danh Sách Bài Đăng bị ẩn"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/user-seller/view-hidden-user-post.jsp"></put-attribute>
+	</definition>
+
+	<!-- view all approved post of user page -->
+	<definition name="view-aprove-post-user"
+		extends="template-main">
+		<put-attribute name="title"
+			value="Danh Sách Bài Đăng được duyệt"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/user-seller/view-post-approved.jsp"></put-attribute>
+	</definition>
+
+	<!-- view all wait approved post of user page -->
+	<definition name="view-wait-aprove-user-post"
+		extends="template-main">
+		<put-attribute name="title"
+			value="Danh Sách Bài Đăng chờ duyệt"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/user-seller/view-wait-approve-user-post.jsp"></put-attribute>
+	</definition>
+
+	<!-- view add post of user page -->
+	<definition name="addPost"
+		extends="template-main">
+		<put-attribute name="title" value="Đăng bài"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/user-seller/add-post.jsp"></put-attribute>
+	</definition>
+	
+	<!-- view noti of user page -->
+	<definition name="list-user-notification"
+		extends="template-main">
+		<put-attribute name="title" value="Thông báo"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/user-seller/list-notification.jsp"></put-attribute>
+	</definition>
+	
+	<!-- admin page -->
+	<!-- view wait approve post page -->
+	<definition name="view-wait-aprove-post-admin"
+		extends="template-main">
+		<put-attribute name="title" value="Danh sách bài đăng chờ duyệt"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/view-all-wait-approve-post.jsp"></put-attribute>
+	</definition>
+	
+	<!-- view all report post page -->
+	<definition name="view-all-report-post"
+		extends="template-main">
+		<put-attribute name="title" value="Danh sách bài đăng báo cáo"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/view-all-report-post.jsp"></put-attribute>
+	</definition>
+	
+	<!-- view all report post page -->
+	<definition name="view-hiddent-post-admin"
+		extends="template-main">
+		<put-attribute name="title" value="Danh sách bài đăng bị ẩn"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/view-all-hidden-post.jsp"></put-attribute>
+	</definition>
+	
+	<!-- view all user page -->
+	<definition name="view-user"
+		extends="template-main">
+		<put-attribute name="title" value="Danh sách người dùng"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/view-users.jsp"></put-attribute>
+	</definition>
+	
+	<!-- view Statiѕtic page -->
+	<definition name="show-statiѕticѕ-by-month"
+		extends="template-main">
+		<put-attribute name="title" value="Thống kê theo tháng"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/statiѕticѕ-to-month.jsp"></put-attribute>
+	</definition>
+	
+	<!-- view Statiѕtic page -->
+	<definition name="show-chart-by-time"
+		extends="template-main">
+		<put-attribute name="title" value="Biểu đồ theo thời gian"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/statistic-by-months.jsp"></put-attribute>
+	</definition>
+	
+	<!-- tenant -->
+	<!-- view all save post -->
+	<definition name="list-save-post"
+		extends="template-main">
+		<put-attribute name="title" value="Danh sách bài đăng đã lưu"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/user-tenant/list-post-saved.jsp"></put-attribute>
+	</definition>
+	
+	<!-- view detail post -->
+	<definition name="detail-post"
+		extends="template-main">
+		<put-attribute name="title" value="Bài đăng"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/detail-post.jsp"></put-attribute>
+	</definition>
+	
+	<!-- view save post -->
+	<definition name="list-save-post"
+		extends="template-main">
+		<put-attribute name="title" value="Bài đăng đã lưu"></put-attribute>
+		<put-attribute name="content"
+			value="/WEB-INF/views/view-list-save-post.jsp"></put-attribute>
+	</definition>
+	
+
+</tiles-definitions>
